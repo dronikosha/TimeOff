@@ -28,18 +28,21 @@
 
         <Button
             android:id="@+id/login"
+            android:elevation="5dpdp"
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="140dp"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/light_buttons"
             android:contentDescription="@string/login"
             android:fontFamily="@font/montserrat_bold"
             android:text="@string/login"
-            android:textSize="14sp"
             android:textColor="@color/black"
-            android:backgroundTint="@color/light_buttons"/>
+            android:textSize="14sp"
+            tools:ignore="DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/registration"
+            android:elevation="5dp"
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -68,9 +71,9 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="233dp"
             android:layout_height="30dp"
+            android:backgroundTint="@color/fields"
             android:inputType="textEmailAddress"
-            tools:ignore="TouchTargetSizeCheck"
-            android:backgroundTint="@color/fields"/>
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -94,7 +97,7 @@
             android:backgroundTint="@color/fields"
             android:inputType="textEmailAddress"
             android:textColorHint="#616161"
-            tools:ignore="TouchTargetSizeCheck" />
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -124,16 +127,17 @@
         style="?attr/materialButtonOutlinedStyle"
         android:layout_width="100dp"
         android:layout_height="45dp"
-        android:layout_marginTop="20dp"
         android:layout_marginStart="220dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/main_buttons"
-        android:contentDescription="@string/login"
         android:fontFamily="@font/montserrat_bold"
         android:text="@string/login"
         android:textColor="@color/black"
         android:textSize="14sp"
+        android:elevation="10dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"/>
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        tools:ignore="TouchTargetSizeCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

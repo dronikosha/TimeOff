@@ -13,6 +13,11 @@
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/mipmap-anydpi-v26/logo.xml" value="0.124" />
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/mipmap-anydpi-v26/timeoff_logo.xml" value="0.2195" />
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/mipmap-anydpi-v26/timeoff_logo_round.xml" value="0.2195" />
+        <entry key="..\:/Users/droni/StudioProjects/TimeOff/app/src/main/res/drawable/button_shadow.xml" value="0.252" />
+        <entry key="..\:/Users/droni/StudioProjects/TimeOff/app/src/main/res/drawable/drop_shadow.xml" value="0.252" />
+        <entry key="..\:/Users/droni/StudioProjects/TimeOff/app/src/main/res/layout/auth.xml" value="0.5" />
+        <entry key="..\:/Users/droni/StudioProjects/TimeOff/app/src/main/res/layout/reg_auth.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/droni/StudioProjects/TimeOff/app/src/main/res/layout/todo.xml" value="0.27291666666666664" />
       </map>
     </option>
   </component>
