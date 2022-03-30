@@ -19,9 +19,9 @@
 
     <com.google.android.material.button.MaterialButtonToggleGroup
         android:id="@+id/toggleButton"
-        android:layout_width="260dp"
+        android:layout_width="268dp"
         android:layout_height="48dp"
-        android:layout_marginStart="55dp"
+        android:layout_marginStart="66dp"
         android:layout_marginTop="270dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -36,19 +36,21 @@
             android:fontFamily="@font/montserrat_bold"
             android:text="@string/login"
             android:textColor="@color/black"
-            android:textSize="13sp" />
+            android:textSize="13sp"
+            app:cornerRadius="10dp" />
 
         <Button
             android:id="@+id/registration"
             style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="130dp"
+            android:layout_width="136dp"
             android:layout_height="48dp"
             android:backgroundTint="@color/light_buttons"
             android:contentDescription="@string/registration"
             android:fontFamily="@font/montserrat_bold"
             android:text="@string/registration"
             android:textColor="@color/black"
-            android:textSize="12sp" />
+            android:textSize="13sp"
+            app:cornerRadius="10dp" />
     </com.google.android.material.button.MaterialButtonToggleGroup>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -133,6 +135,7 @@
         android:text="@string/to_registrate"
         android:textColor="@color/black"
         android:textSize="13sp"
+        app:cornerRadius="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"
         tools:ignore="TouchTargetSizeCheck" />

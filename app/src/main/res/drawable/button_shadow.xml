@@ -1,41 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_pressed="true" android:state_enabled="true">
-        <set>
-            <objectAnimator android:propertyName="translationZ"
-                android:duration="@integer/button_pressed_animation_duration"
-                android:valueTo="@dimen/button_pressed_z_material"
-                android:valueType="floatType"/>
-            <objectAnimator android:propertyName="elevation"
-                android:duration="0"
-                android:valueTo="@dimen/button_elevation_material"
-                android:valueType="floatType"/>
-        </set>
-    </item>
-    <!-- base state -->
-    <item android:state_enabled="true">
-        <set>
-            <objectAnimator android:propertyName="translationZ"
-                android:duration="@integer/button_pressed_animation_duration"
-                android:valueTo="0"
-                android:startDelay="@integer/button_pressed_animation_delay"
-                android:valueType="floatType"/>
-            <objectAnimator android:propertyName="elevation"
-                android:duration="0"
-                android:valueTo="@dimen/button_elevation_material"
-                android:valueType="floatType" />
-        </set>
-    </item>
     <item>
-        <set>
-            <objectAnimator android:propertyName="translationZ"
-                android:duration="0"
-                android:valueTo="0"
-                android:valueType="floatType"/>
-            <objectAnimator android:propertyName="elevation"
-                android:duration="0"
-                android:valueTo="0"
-                android:valueType="floatType"/>
-        </set>
+        <layer-list>
+            <item android:right="5dp" android:top="5dp">
+                <shape>
+                    <corners android:radius="3dp" />
+                    <solid android:color="#D6D6D6" />
+                </shape>
+            </item>
+            <item android:bottom="2dp" android:left="2dp">
+                <shape>
+                    <gradient android:angle="270"
+                        android:endColor="#E2E2E2" android:startColor="#BABABA" />
+                    <stroke android:width="1dp" android:color="#BABABA" />
+                    <corners android:radius="4dp" />
+                    <padding android:bottom="10dp" android:left="10dp"
+                        android:right="10dp" android:top="10dp" />
+                </shape>
+            </item>
+        </layer-list>
     </item>
+
 </selector>
