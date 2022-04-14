@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_news"
+        android:icon="@drawable/ic_icons8_________1"
+        android:title="Новости" />
+    <item
+        android:id="@+id/nav_menu"
+        android:icon="@drawable/ic__536533_1"
+        android:title="Меню" />
+    <item
+        android:id="@+id/nav_rooms"
+        android:icon="@drawable/ic_icons8_________24_2"
+        android:title="Комнаты" />
+    <item
+        android:id="@+id/nav_person"
+        android:icon="@drawable/ic_icons8_______________________1__2"
+        android:title="Кабинет" />
+</menu>

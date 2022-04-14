@@ -11,4 +11,46 @@
     <string name="male_checkbox">М</string>
     <string name="female_checkbox">Ж</string>
     <string name="agreement">Даю согласие на обработку данных</string>
+    <string name="room_chooser">Выбор комнаты</string>
+    <string name="scroll_room_chooser">Выбрать комнату:</string>
+    <string name="make_a_book">Забронировать</string>
+    <string name="person_bar">Личный кабинет</string>
+    <string name="profile">Профиль:</string>
+    <string name="name">Имя Фамилия</string>
+    <string name="bonus">Бонусы:</string>
+    <string name="history">История:</string>
+    <string name="people_amount">Количество людей:</string>
+    <string name="date">Дата:</string>
+    <string name="time_start">Начало:</string>
+    <string name="time_end">Конец:</string>
+    <string name="bonus_to_give">Потратить бонусов:</string>
+    <string name="sum">Сумма:</string>
+    <string name="make_an_order">Заказать</string>
+    <string name="news_title">Новости</string>
+    <string name="news_card_view">Описание новости, здесь будет написано. Краткое объяснение того, что случилось. Может новая комната открылась, или у нас скидки какие-то</string>
+
+
+    <string-array name="rooms">
+        <item>Бегемотня</item>
+        <item>Отдых</item>
+        <item>Ночной файт</item>
+    </string-array>
+
+    <string-array name="settings">
+        <item id="change_profile">Изменить</item>
+        <item id="exit">Выйти</item>
+    </string-array>
+
+
+
+    <string-array name="news_paper">
+        <item>Описание новости, здесь будет написано. Краткое объяснение того, что случилось. Может новая комната открылась, или у нас скидки какие-то</item>
+        <item>222222222222222222222222222222222222222222222222222</item>
+        <item>333333333333333333333333333333333333333333333333333</item>
+        <item>444444444444444444444444444444444444444444444444444</item>
+    </string-array>
+
+    <string name="desritpion_room_begemot">Это самая маленькая комната в сети наших заведений, но зато у неё самая доступная стоимость аренды. Здесь могут с комфортом разместиться 2 человека. Втроём тоже можно, хотя и тесновато. Комната подходит для свиданий, для игр (ведь в этой комнате есть приставка и ТВ-монитор) и для любых ваших идей</string>
+    <string name="description_game">Цель игры — рационально используя стартовый капитал остаться единственным игроком, который не достиг банкротства. Фактически «Монополия» представляет собой игровое поле, состоящее из квадратов, которые проходят по кругу все игроки по очереди. Квадраты разделяются на активы (предприятие, ценная вещь) и события.</string>
+
 </resources>
