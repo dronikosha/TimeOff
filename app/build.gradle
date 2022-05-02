@@ -1,8 +1,16 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.gms.google-services'
 }
 
 android {
+    dataBinding {
+        enabled true
+    }
+
+    buildFeatures{
+        viewBinding true
+    }
 
 
     compileSdk 32
@@ -33,17 +41,32 @@ android {
 
 dependencies {
 
+//1.5.0
+    // implementation 'com.android.tools.build:gradle:1.5.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
+    def life_versions = "1.1.1"
+
+    //firebase
+    implementation platform('com.google.firebase:firebase-bom:29.3.1')
+    implementation 'com.google.firebase:firebase-database'
+
+// Lifecycle components
+//    implementation "android.arch.lifecycle:extensions:$life_versions"
+//    annotationProcessor "android.arch.lifecycle:compiler:$life_versions"
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
     def nav_version = "2.4.1"
 
     // Java language implementation
     implementation "androidx.navigation:navigation-fragment:$nav_version"
     implementation "androidx.navigation:navigation-ui:$nav_version"
+
 
 }

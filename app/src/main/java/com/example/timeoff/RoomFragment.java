@@ -106,7 +106,7 @@ public class RoomFragment extends Fragment {
                 if (id == R.id.book_a_room_roomchooser) {
                     dialogView();
                 }
-                }
+            }
         };
 
         btnBook.setOnClickListener(onClickListener);

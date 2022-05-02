@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "105350278383",
+    "project_id": "timeoff-71ea0",
+    "storage_bucket": "timeoff-71ea0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:105350278383:android:38594cc11253e98c387f1a",
+        "android_client_info": {
+          "package_name": "com.example.timeoff"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "105350278383-1jedci7h47hsjnun30p0ta5b8di7ogks.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3yve3Zw3IDq05JKu2eaVBm4sy0esYvpM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "105350278383-1jedci7h47hsjnun30p0ta5b8di7ogks.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
