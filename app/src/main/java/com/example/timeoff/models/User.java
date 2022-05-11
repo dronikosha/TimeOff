@@ -5,6 +5,8 @@ public class User {
     private String mail;
     private String password;
     private String gender;
+    private String name;
+    private String surname;
     public User(String mail, String password, String gender) {
         this.mail = mail;
         this.password = password;

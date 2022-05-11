@@ -89,7 +89,7 @@
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <Button
-        android:id="@+id/enter"
+        android:id="@+id/change"
         android:layout_width="186dp"
         android:layout_height="52dp"
         android:layout_marginStart="60dp"
@@ -98,7 +98,7 @@
         android:backgroundTint="@color/main_buttons"
         android:contentDescription="@string/login"
         android:fontFamily="@font/montserrat_bold"
-        android:text="@string/make_an_order"
+        android:text="Сохранить"
         android:textColor="@color/black"
         android:textSize="14sp"
         app:cornerRadius="15dp"

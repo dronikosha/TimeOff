@@ -10,10 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.timeoff.NewsFragment;
 import com.example.timeoff.R;
-
-import java.util.zip.Inflater;
 
 public class RecyclerAdapterNews extends RecyclerView.Adapter<RecyclerAdapterNews.NewsHolder> {
 

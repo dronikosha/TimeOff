@@ -99,7 +99,7 @@
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/people"
         android:layout_width="59dp"
         android:layout_height="37dp"
         android:layout_marginStart="16dp"

@@ -54,8 +54,8 @@
         android:id="@+id/enter"
         android:layout_width="100dp"
         android:layout_height="45dp"
-        android:layout_marginStart="208dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="228dp"
+        android:layout_marginTop="28dp"
         android:backgroundTint="@color/main_buttons"
         android:contentDescription="@string/login"
         android:fontFamily="@font/montserrat_bold"
@@ -64,76 +64,61 @@
         android:textSize="14sp"
         app:cornerRadius="15dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/auth_password"
         tools:ignore="TouchTargetSizeCheck" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/gmail"
-        android:layout_width="232dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="76dp"
+    <EditText
+        android:id="@+id/auth_mail"
+        android:layout_width="226dp"
+        android:layout_height="36dp"
         android:layout_marginTop="372dp"
-        app:boxCornerRadiusBottomEnd="13dp"
-        app:boxCornerRadiusBottomStart="13dp"
-        app:boxCornerRadiusTopEnd="13dp"
-        app:boxCornerRadiusTopStart="13dp"
-        app:boxStrokeWidth="0dp"
+        android:autofillHints="creditCardExpirationDate"
+        android:background="@drawable/blue_outline"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:background="@drawable/round_edit_text"
-            android:layout_width="233dp"
-            android:layout_height="30dp"
-            android:inputType="textEmailAddress"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/text_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="4dp"
-        android:text="@string/auth_password"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gmail"
-        tools:ignore="MissingConstraints" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/password"
-        android:layout_width="232dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="432dp"
-        app:boxCornerRadiusBottomEnd="13dp"
-        app:boxCornerRadiusBottomStart="13dp"
-        app:boxCornerRadiusTopEnd="13dp"
-        app:boxCornerRadiusTopStart="13dp"
-        app:boxStrokeWidth="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="233dp"
-            android:layout_height="30dp"
-            android:background="@drawable/round_edit_text"
-            android:inputType="textEmailAddress"
-            android:textColorHint="#616161"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/text_mail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
+        android:layout_marginStart="88dp"
         android:layout_marginTop="8dp"
         android:text="@string/auth_mail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/auth_password"
+        android:layout_width="226dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="440dp"
+        android:autofillHints="creditCardExpirationDate"
+        android:background="@drawable/blue_outline"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/text_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/auth_password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/auth_mail"
         tools:ignore="MissingConstraints" />
 
 

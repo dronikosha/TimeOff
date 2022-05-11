@@ -30,15 +30,15 @@
 
             <ImageView
                 android:id="@+id/imageView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="126dp"
+                android:layout_height="115dp"
                 app:layout_constraintBottom_toBottomOf="@+id/view2"
                 app:layout_constraintEnd_toEndOf="@+id/view2"
                 app:layout_constraintHorizontal_bias="0.527"
                 app:layout_constraintStart_toStartOf="@+id/view2"
                 app:layout_constraintTop_toTopOf="@+id/view2"
                 app:layout_constraintVertical_bias="0.205"
-                app:srcCompat="@drawable/burger_background" />
+                app:srcCompat="@mipmap/burger_for_menu" />
 
             <ImageButton
                 android:id="@+id/imageButton2"

@@ -1,12 +1,12 @@
-package com.example.timeoff;
+package com.example.timeoff.views;
 
 import android.app.Dialog;
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,18 +14,16 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link RoomFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import com.example.timeoff.R;
+import com.example.timeoff.databinding.PersonBinding;
+import com.example.timeoff.databinding.RoomChooserBinding;
+import com.example.timeoff.viewModels.PersonViewModel;
+import com.example.timeoff.viewModels.RoomViewModel;
+
 public class RoomFragment extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -37,14 +35,6 @@ public class RoomFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment RoomFragment.
-     */
     // TODO: Rename and change types and number of parameters
     public static RoomFragment newInstance(String param1, String param2) {
         RoomFragment fragment = new RoomFragment();
@@ -66,7 +56,9 @@ public class RoomFragment extends Fragment {
     }
 
     Dialog dialog;
-    public void dialogView() {
+    public final RoomViewModel mViewModel = new RoomViewModel();
+    RoomChooserBinding binding;
+    public void dialogView(RoomViewModel mViewModel) {
         //Создание и вызова диалогового окна
         dialog = new Dialog(getActivity());
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -80,13 +72,29 @@ public class RoomFragment extends Fragment {
                 dialog.dismiss();
             }
         });
-        //Создание и вызова диалогового окна
+
+        (dialog.findViewById(R.id.enter)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EditText people = dialog.findViewById(R.id.people);
+                EditText date = dialog.findViewById(R.id.date);
+                EditText start_time = dialog.findViewById(R.id.time_start_edit);
+                EditText end_time = dialog.findViewById(R.id.time_end_edit);
+                if (mViewModel.isValid(people.getText().toString(), date.getText().toString(), start_time.getText().toString(), end_time.getText().toString())) {
+                    mViewModel.addBook(people.getText().toString(), date.getText().toString(), start_time.getText().toString(), end_time.getText().toString());
+                    dialog.dismiss();
+                }
+            }
+        });
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        binding = RoomChooserBinding.inflate(inflater, container, false);
+        View v = binding.getRoot();
+        RoomViewModel mViewModel = new ViewModelProvider(this).get(RoomViewModel.class);
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.room_chooser, container, false);
         View viewDialog = inflater.inflate(R.layout.booker_dialog, container, false);
@@ -102,15 +110,12 @@ public class RoomFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 int id = view.getId();
-                int dialog_id = viewDialog.getId();
                 if (id == R.id.book_a_room_roomchooser) {
-                    dialogView();
+                    dialogView(mViewModel);
                 }
             }
         };
-
         btnBook.setOnClickListener(onClickListener);
-        btnCls.setOnClickListener(onClickListener);
 
 
         return view;

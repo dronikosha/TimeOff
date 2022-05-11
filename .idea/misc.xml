@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/drawable/blue_outline.xml" value="0.2015" />
+        <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/drawable/burger_background.xml" value="0.18" />
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/drawable/cart_row.xml" value="0.1595" />
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/drawable/dialog_booker_rectangle.xml" value="0.1945" />
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/drawable/drop_shadow.xml" value="0.2155" />
@@ -18,13 +19,15 @@
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/drawable/timeoff_logo_background.xml" value="0.2195" />
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/layout/auth.xml" value="0.25" />
-        <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/layout/auth_layout.xml" value="0.264" />
+        <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/layout/auth_layout.xml" value="0.4" />
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/layout/booker_dialog.xml" value="0.264" />
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/layout/cart_row.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/layout/dialog_about_game.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/layout/dialog_cart.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/layout/food_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/layout/fragment_news.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/layout/fragment_person.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/layout/fun_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/layout/history_row.xml" value="0.264" />
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/layout/kpwojfgpiowirf.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/layout/liner_news_row.xml" value="0.22056159420289856" />
@@ -32,15 +35,17 @@
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/layout/menu_food_row.xml" value="0.4" />
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/layout/news.xml" value="0.264" />
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/layout/news_row.xml" value="0.22056159420289856" />
-        <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/layout/person.xml" value="0.264" />
+        <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/layout/person.xml" value="0.24358974358974358" />
+        <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/layout/person_popup_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/layout/reg_auth.xml" value="0.2" />
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/layout/reg_fragment.xml" value="0.12360688956433637" />
-        <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/layout/registr_fragment.xml" value="0.30264993026499304" />
+        <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/layout/registr_fragment.xml" value="0.25" />
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/layout/room_chooser.xml" value="0.264" />
-        <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/layout/settings_dialog.xml" value="0.4" />
+        <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/layout/settings_dialog.xml" value="0.38974358974358975" />
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/layout/test.xml" value="0.12360688956433637" />
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/layout/todo.xml" value="0.11302083333333333" />
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/menu/bottom_navigation.xml" value="0.1" />
+        <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/menu/person_popup_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/mipmap-anydpi-v26/logo.xml" value="0.124" />
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/mipmap-anydpi-v26/logo_timeoff.xml" value="0.109" />
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/mipmap-anydpi-v26/logo_timeoff_round.xml" value="0.109" />
@@ -48,6 +53,8 @@
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/mipmap-anydpi-v26/news_room_round.xml" value="0.124" />
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/mipmap-anydpi-v26/timeoff_logo.xml" value="0.2195" />
         <entry key="..\:/Users/droni/AndroidStudioProjects/TimeOff/app/src/main/res/mipmap-anydpi-v26/timeoff_logo_round.xml" value="0.2195" />
+        <entry key="..\:/Users/droni/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_list_item_1.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/droni/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_spinner_dropdown_item.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

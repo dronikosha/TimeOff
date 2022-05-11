@@ -1,4 +1,4 @@
-package com.example.timeoff;
+package com.example.timeoff.views;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.timeoff.R;
 import com.example.timeoff.adapters.RecyclerAdapterNews;
 
 /**

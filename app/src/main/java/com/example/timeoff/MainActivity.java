@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.test);
-        getSupportFragmentManager().beginTransaction().replace(R.id.test, new RegistrFragment()).commit();
+        setContentView(R.layout.activity_main);
+        //getSupportFragmentManager().beginTransaction().replace(R.id.test, new RegistrFragment()).commit();
 
 
 //        bottomNavigationView = findViewById(R.id.bottom_navigation);
