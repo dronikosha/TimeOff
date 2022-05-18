@@ -1,6 +1,7 @@
 package com.example.timeoff.views;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -12,11 +13,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
+import com.example.timeoff.MainActivity;
 import com.example.timeoff.R;
 import com.example.timeoff.databinding.PersonBinding;
 import com.example.timeoff.databinding.RoomChooserBinding;
@@ -58,7 +62,7 @@ public class RoomFragment extends Fragment {
     Dialog dialog;
     public final RoomViewModel mViewModel = new RoomViewModel();
     RoomChooserBinding binding;
-    public void dialogView(RoomViewModel mViewModel) {
+    public void dialogView(RoomViewModel mViewModel, String[] name) {
         //Создание и вызова диалогового окна
         dialog = new Dialog(getActivity());
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -70,6 +74,7 @@ public class RoomFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 dialog.dismiss();
+                Toast.makeText(getContext(), "Команата забронирована", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -81,7 +86,7 @@ public class RoomFragment extends Fragment {
                 EditText start_time = dialog.findViewById(R.id.time_start_edit);
                 EditText end_time = dialog.findViewById(R.id.time_end_edit);
                 if (mViewModel.isValid(people.getText().toString(), date.getText().toString(), start_time.getText().toString(), end_time.getText().toString())) {
-                    mViewModel.addBook(people.getText().toString(), date.getText().toString(), start_time.getText().toString(), end_time.getText().toString());
+                    mViewModel.addBook(people.getText().toString(), date.getText().toString(), start_time.getText().toString(), end_time.getText().toString(), name);
                     dialog.dismiss();
                 }
             }
@@ -106,12 +111,36 @@ public class RoomFragment extends Fragment {
         // Создание спинера для списка комнат
         Button btnBook = view.findViewById(R.id.book_a_room_roomchooser);
         Button btnCls = viewDialog.findViewById(R.id.butn_back_from_dialog);
+
+        final String[] roomName = {""};
+        roomChooser.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                switch (i) {
+                    case 0:
+                        //Бегемотня
+                        roomName[0] = "Бегемотня";
+                        break;
+                    case 1:
+                        //Отдых
+                        roomName[0] = "Отдых";
+                        break;
+                    case 2:
+                        roomName[0] = "Ночной файт";
+                        break;
+                        //Ночной файт
+                }
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+            }
+        });
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 int id = view.getId();
                 if (id == R.id.book_a_room_roomchooser) {
-                    dialogView(mViewModel);
+                    dialogView(mViewModel, roomName);
                 }
             }
         };

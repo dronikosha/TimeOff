@@ -17,9 +17,9 @@ public class RoomViewModel extends ViewModel {
         return !TextUtils.isEmpty(people) && !TextUtils.isEmpty(date) && !TextUtils.isEmpty(start_time) && !TextUtils.isEmpty(end_time);
     }
 
-    public void addBook(String people, String date, String start_time, String end_time) {
+    public void addBook(String people, String date, String start_time, String end_time, String[] roomName) {
         book = new Book(people, date, start_time, end_time);
-        daoBook.addBook(book);
+        daoBook.addBook(book, roomName);
     }
 
 

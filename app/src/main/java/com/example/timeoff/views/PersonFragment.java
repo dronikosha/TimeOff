@@ -3,6 +3,7 @@ package com.example.timeoff.views;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -11,6 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -27,14 +30,33 @@ import android.widget.Toast;
 
 import com.example.timeoff.MainActivity;
 import com.example.timeoff.R;
+import com.example.timeoff.adapters.CartAdapter;
+import com.example.timeoff.adapters.HistoryAdapter;
 import com.example.timeoff.databinding.AuthLayoutBinding;
 import com.example.timeoff.databinding.PersonBinding;
+import com.example.timeoff.models.FoodItem;
+import com.example.timeoff.models.History;
+import com.example.timeoff.repository.CartRepo;
 import com.example.timeoff.repository.DAOUser;
 import com.example.timeoff.viewModels.AuthViewModel;
 import com.example.timeoff.viewModels.PersonViewModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.MultiFormatWriter;
+import com.google.zxing.WriterException;
+import com.google.zxing.common.BitMatrix;
+import com.google.zxing.pdf417.encoder.BarcodeMatrix;
+import com.journeyapps.barcodescanner.BarcodeEncoder;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -87,6 +109,7 @@ public class PersonFragment extends Fragment {
     public final PersonViewModel mViewModel = new PersonViewModel();
     PersonBinding binding;
     public DAOUser daoUser = new DAOUser();
+    public HistoryAdapter adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -94,6 +117,18 @@ public class PersonFragment extends Fragment {
         binding = PersonBinding.inflate(inflater, container, false);
         View v = binding.getRoot();
         PersonViewModel mViewModel = new ViewModelProvider(this).get(PersonViewModel.class);
+
+        String name = binding.FIO.getText().toString().trim();
+        MultiFormatWriter writer = new MultiFormatWriter();
+        try {
+            BitMatrix matrix = writer.encode(name, BarcodeFormat.QR_CODE, 1000, 1000);
+            BarcodeEncoder encoder = new BarcodeEncoder();
+            Bitmap bitmap = encoder.createBitmap(matrix);
+            binding.QR.setImageBitmap(bitmap);
+        } catch (WriterException e) {
+            e.printStackTrace();
+        }
+
         daoUser.getDatabaseReference().get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DataSnapshot> task) {
@@ -110,6 +145,32 @@ public class PersonFragment extends Fragment {
                 }
             }
         });
+        ArrayList<History> list = new ArrayList<History>();
+        DatabaseReference db = FirebaseDatabase.getInstance("https://timeoff-71ea0-default-rtdb.europe-west1.firebasedatabase.app/").getReference("history");
+        db.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot ds : snapshot.getChildren()) {
+                    History item = ds.getValue(History.class);
+                    String id = ds.getKey();
+                    item.setRoomName(id);
+                    list.add(item);
+                }
+                RecyclerView hisRec = binding.historyPersonView;
+                Collections.reverse(list);
+                hisRec.setAdapter(new HistoryAdapter(list));
+                GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 1);
+                hisRec.setLayoutManager(gridLayoutManager);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.person, container, false);
 

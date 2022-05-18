@@ -92,6 +92,7 @@
         android:autofillHints="creditCardExpirationDate"
         android:background="@drawable/blue_outline"
         android:ems="10"
+        android:textAlignment="center"
         android:paddingLeft="5dp"
         android:inputType="date"
         app:layout_constraintStart_toEndOf="@+id/textView6"
